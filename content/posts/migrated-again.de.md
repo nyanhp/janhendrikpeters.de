@@ -1,7 +1,7 @@
 ---
 title: Blog mal wieder migriert"
 date: 2023-04-18T10:31:55+02:00
-draft: true
+draft: false
 ---
 
 ## Migration des Blogs zu Hugo
