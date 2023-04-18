@@ -1,9 +1,6 @@
 
 name: Publish content
 on:
-    label:
-      types:
-        - created
     push:
       branches:
         - main
@@ -17,14 +14,15 @@ jobs:
     publish:
         name: Deploy
         runs-on: ubuntu-latest
-        steps:    
-        - name: Sync files
-          uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        steps:
+        - name: "Deploy"
+          uses: milanmk/actions-file-deployer@master
           with:
-              server: ${{ secrets.sftp }}
-              username: ${{ secrets.user }}
-              password: ${{ secrets.password }}
-              protocol: sftp
-              port: 22
-              local-dir: ./public/
-              server-dir: janhendrikpetersde/
+            remote-protocol: "sftp"
+            remote-host: ${{ secrets.sftp }}
+            remote-user: ${{ secrets.user }}
+            remote-password: ${{ secrets.password }}
+            remote-path: /janhendrikpetersde
+            local-path: ./public
+            sync: full
+            proxy: false
