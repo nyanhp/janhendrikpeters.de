@@ -9,20 +9,23 @@ jobs:
         runs-on: ubuntu-latest
         name: Build static content
         steps:            
-            - uses: actions/checkout@v3
-            - run: hugo
-    publish:
-        name: Deploy
-        runs-on: ubuntu-latest
-        steps:
-        - name: "Deploy"
-          uses: milanmk/actions-file-deployer@master
-          with:
-            remote-protocol: "sftp"
-            remote-host: ${{ secrets.sftp }}
-            remote-user: ${{ secrets.user }}
-            remote-password: ${{ secrets.password }}
-            remote-path: /janhendrikpetersde
-            local-path: ./public
-            sync: full
-            proxy: false
+          - name: Get that stuff
+            uses: actions/checkout@v3
+          - name: Setup Hugo
+            uses: peaceiris/actions-hugo@v2
+            with:
+              hugo-version: latest
+              extended: true
+          - name: Build
+            run: hugo --minify
+          - name: Deploy
+            uses: milanmk/actions-file-deployer@master
+            with:
+              remote-protocol: "sftp"
+              remote-host: ${{ secrets.sftp }}
+              remote-user: ${{ secrets.user }}
+              remote-password: ${{ secrets.password }}
+              remote-path: /janhendrikpetersde
+              local-path: ./public
+              sync: full
+              proxy: false
