@@ -2,6 +2,10 @@
 title: "Migrated Again"
 date: 2023-04-18T10:31:55+02:00
 draft: false
+tags:
+  - general-info
+categories:
+  - misc
 ---
 
 ## Blog migration to Hugo and Azure Static Web Apps
