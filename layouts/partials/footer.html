@@ -1,0 +1,13 @@
+<footer class="container">
+    <hr class="soften">
+    <p>
+        {{- partial "copyright.html" . -}}
+    </p>
+    <p class="text-center">
+        <a href="https://metalhead.club/@nyanhp">Mastodon</a>
+        {{ with .Site.Params.linkedin }}<a href="{{ . }}">Linkedin</a> {{ end }}
+        {{ with .Site.Params.github }}<a href="{{ . }}">GitHub</a> {{ end }}
+        {{ with .Site.Params.gitlab }}<a href="{{ . }}">GitLab</a>{{ end }}
+    </p>
+</footer>
+
