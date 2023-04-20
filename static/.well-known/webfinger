@@ -1,0 +1,23 @@
+{
+    "subject": "acct:nyanhp@metalhead.club",
+    "aliases": [
+        "https://metalhead.club/@nyanhp",
+        "https://metalhead.club/users/nyanhp"
+    ],
+    "links": [
+        {
+            "rel": "http://webfinger.net/rel/profile-page",
+            "type": "text/html",
+            "href": "https://metalhead.club/@nyanhp"
+        },
+        {
+            "rel": "self",
+            "type": "application/activity+json",
+            "href": "https://metalhead.club/users/nyanhp"
+        },
+        {
+            "rel": "http://ostatus.org/schema/1.0/subscribe",
+            "template": "https://metalhead.club/authorize_interaction?uri={uri}"
+        }
+    ]
+}
