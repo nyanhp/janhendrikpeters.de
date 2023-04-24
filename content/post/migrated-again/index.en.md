@@ -8,7 +8,7 @@ categories:
   - misc
 ---
 
-## Blog migration to Hugo and Azure Static Web Apps
+## Blog migration to Hugo
 
 The only constant is change. I'm growing tired of Wordpress, besides: It
 is far too much for my little blog. So, I'm giving Hugo a chance.

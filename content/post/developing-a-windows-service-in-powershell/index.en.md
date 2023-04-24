@@ -2,6 +2,12 @@
 title: "Developing a Windows Service in PowerShell"
 date: 2021-01-15T00:00:00+02:00
 draft: false
+tags:
+  - pwsh
+  - dotnet
+  - windows
+categories:
+  - dev
 ---
 
 ## Developing a Windows service in PowerShell

@@ -2,6 +2,11 @@
 title: "The 90 Day Challenge - My Experience"
 date: 2020-12-09T00:00:00+02:00
 draft: false
+tags:
+  - fitness
+  - health
+categories:
+  - misc
 ---
 
 ## The 90-Day Challenge – My experience

@@ -2,6 +2,11 @@
 title: "Pics or It Didnt Happen"
 date: 2020-12-10T00:00:00+02:00
 draft: false
+tags:
+  - fitness
+  - health
+categories:
+  - misc
 ---
 
 ## 90 Day Challenge – Nutrition and before/after

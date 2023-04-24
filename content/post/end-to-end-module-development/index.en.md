@@ -2,6 +2,14 @@
 title: "End to End Module Development"
 date: 2023-02-23T00:00:00+02:00
 draft: false
+tags:
+  - pwsh
+  - development
+  - ci-cd
+  - pester
+  - psmoduledevelopment
+categories:
+  - dev
 ---
 
 # End to end module development

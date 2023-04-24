@@ -2,6 +2,12 @@
 title: "Add Telemetry to Your Powershell Module"
 date: 2019-08-15T00:00:00+02:00
 draft: false
+tags:
+  - pwsh
+  - dotnet
+  - telemetry
+categories:
+  - dev
 ---
 
 ## Add telemetry to your PowerShell module

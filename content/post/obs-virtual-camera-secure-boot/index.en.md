@@ -2,6 +2,14 @@
 title: "Obs Virtual Camera Secure Boot"
 date: 2021-05-11T00:00:00+02:00
 draft: false
+tags:
+  - linux
+  - pwsh
+  - streaming
+  - obs
+  - kernel-module-signing
+categories:
+  - tech
 ---
 
 ## OBS Virtual Camera on Fedora – Signing kernel modules for Secure Boot

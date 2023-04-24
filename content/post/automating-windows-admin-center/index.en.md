@@ -2,6 +2,14 @@
 title: "Automating Windows Admin Center"
 date: 2018-04-10T00:00:00+02:00
 draft: false
+tags:
+  - pwsh
+  - dotnet
+  - windows
+  - windows-admin-center
+  - rest-api
+categories:
+  - dev
 ---
 
 ## Automating Windows Admin Center

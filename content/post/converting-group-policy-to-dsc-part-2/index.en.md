@@ -2,6 +2,14 @@
 title: "Converting Group Policy to Dsc Part 2"
 date: 2019-09-06T00:00:00+02:00
 draft: false
+tags:
+  - pwsh
+  - dotnet
+  - windows
+  - dsc
+  - group-policy
+categories:
+  - dev
 ---
 
 ## Testing the infrastructure

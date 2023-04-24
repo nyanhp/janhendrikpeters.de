@@ -2,6 +2,14 @@
 title: "Converting Group Policy to Dsc Configuration"
 date: 2019-08-23T00:00:00+02:00
 draft: false
+tags:
+  - pwsh
+  - dotnet
+  - windows
+  - dsc
+  - group-policy
+categories:
+  - dev
 ---
 
 Converting Group Policies to DSC configurations

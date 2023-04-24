@@ -2,6 +2,15 @@
 title: "Dsc Configuration Data Encryption Done Right"
 date: 2020-01-17T00:00:00+02:00
 draft: false
+tags:
+  - pwsh
+  - public-key-cryptography
+  - ci-cd
+  - desired-state-configuration
+  - dsc
+categories:
+  - tech
+  - dev
 ---
 
 ## DSC Configuration data encryption done right
