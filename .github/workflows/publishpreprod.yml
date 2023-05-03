@@ -1,0 +1,33 @@
+
+name: Publish preprod content
+on:
+    push:
+      branches:
+        - dev
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        name: Build static content
+        steps:            
+          - name: Get that stuff
+            uses: actions/checkout@v3
+            with:
+              submodules: true
+          - name: Setup Hugo
+            uses: peaceiris/actions-hugo@v2
+            with:
+              hugo-version: latest
+              extended: true
+          - name: Build
+            run: hugo --minify
+          - name: Deploy
+            uses: milanmk/actions-file-deployer@master
+            with:
+              remote-protocol: "sftp"
+              remote-host: ${{ secrets.sftp }}
+              remote-user: ${{ secrets.user }}
+              remote-password: ${{ secrets.password }}
+              remote-path: /preprodjanhendrikpetersde
+              local-path: ./public
+              sync: full
+              proxy: false
