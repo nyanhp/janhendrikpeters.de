@@ -1,4 +1,4 @@
-[CmdletBinding()]
+[CmdletBinding(DefaultParameterSetName = 'All')]
 param
 (
     [Parameter(ParameterSetName = 'Notebook')]
