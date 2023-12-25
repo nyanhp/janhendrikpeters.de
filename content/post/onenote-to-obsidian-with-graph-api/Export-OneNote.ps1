@@ -10,7 +10,7 @@ param
     [Parameter(ParameterSetName = 'Notebook')]
     [Parameter(ParameterSetName = 'All')]
     [string]
-    $OneDriveAppClientId = '812899b7-584c-4812-8aee-11d3e164d58b',
+    $OneNoteAppClientId = '812899b7-584c-4812-8aee-11d3e164d58b',
 
     [string]
     $User = 'me',
@@ -31,7 +31,7 @@ param
 #requires -Module MiniGraph
 #requires -Module MarkdownPrince
 
-Connect-GraphDeviceCode -TenantId $TenantId -ClientId $OneDriveAppClientId
+Connect-GraphDeviceCode -TenantId $TenantId -ClientId $OneNoteAppClientId
 Set-GraphEndpoint -Type beta
 
 $notebooks = if ($All.IsPresent)

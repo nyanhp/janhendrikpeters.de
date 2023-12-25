@@ -33,19 +33,19 @@ wollte ich eigentlich was nettes mit der Graph API (<https://learn.microsoft.com
 >Der Zugriff auf Graph erfolgt mit Hilfe einer App Registration in Entra ID.
 
 Und in dem Moment fiel mir wieder ein, dass mein Kollege 
-[Friedrich Weinmann](https://github.com/friedrichweinmann/minigraph) mit seine
+[Friedrich Weinmann](https://github.com/friedrichweinmann/minigraph) mit seinem
 PowerShell-Modul MiniGraph bereits den nervigen Teil meiner Idee erledigt
 hatte: Authentifizierung mit Entra!
 
 ## Vorbereitungen in Entra ID
 
 Um auf die Graph API zugreifen zu können, wird eine Resource benötigt, die
-die gewünschten Berechtigungen beschreibt - eine App Registration bzw. eine
-Enterprise App.
+die gewünschten Berechtigungen beschreibt - eine App Registration, aus der später
+unter Umständen eine Enterprise App wird.
 
-App anlegen, screenshot, multitenant
+![Screenshot showing the multi-tenant app usage enabled](./app_reg_multitenant.png)
 
-Um auch für eure persönlichen OneDrives einen Export zu ermöglichen,
+Um auch für eure persönlichen OneNotes einen Export zu ermöglichen,
 sollte die App Registration Multi-Tenant-fähig sein. Ist sie dies nicht,
 müsst ihr alle Nutzer der App als Gastnutzer in euren Tenant einladen. Eine Nutzung
 im Kontext der privaten Microsoft-Konten ist dann nicht möglich.
@@ -53,6 +53,8 @@ im Kontext der privaten Microsoft-Konten ist dann nicht möglich.
 Zu letzt sollten noch die Graph-Berechtigungen eurer neuen App als
 Delegated Permissions eingetragen werden. Um OneNote zu befreien, genügen
 notes.read.all.
+
+![Screenshot of delegated permissions to access OneNote notebooks](./app_reg_delegated.png)
 
 ### Delegated Permissions versus Application Permissions
 
@@ -83,20 +85,19 @@ Fred hat mit diesem Modul einen schlanken, schnellen Weg zur Graph API
 gebaut, mit allen erdenklichen Authentifizierungsmethoden. Diese hängen stark
 von eurer App Registration und Nutzung ab: Credentials und Zertifikate werden
 als App Secrets hinterlegt und zur Anmeldung im Kontext der App genutzt. Nicht ideal,
-um das eigene OneDrive aufzuräumen.
+um das eigene OneNote aufzuräumen.
 
 Abhilfe schaffen Connect-GraphBrowser beziehungsweise Connect-GraphDeviceCode. Beide
 Authentifizierungs-Abläufe benötigen eine Client ID und eine Tenant ID. Moment mal,
-ist die Tenant ID nicht üblicherweise etwas, was einzigartig pro Entra Tenant ist? Wie
-kann damit denn ein persönliches OneDrive abgefragt werden? Tja! In der Graph Doku
-gibt es die Antwort - mit der Tenant ID Common geht es hier weiter.
+ist die Tenant ID nicht üblicherweise etwas, was einzigartig pro Entra Tenant ist und
+nicht öffentlich kommuniziert wird? Wie kann damit denn ein persönliches OneNote
+abgefragt werden? Tja! In der Graph Doku gibt es die Antwort - 
+mit der Tenant ID Common geht es hier weiter.
 
 Die Client ID der App Registration müsst ihr euren Anwenderinnen jedoch mitteilen, bzw. 
 die Client ID fest in eurer App Config (C#) oder PowerShell config (PSFramework) konfigurieren.
 Bei der Anmeldung wird bei der Nutzung ein Disclaimer eingeblendet, der die detaillierten
 Berechtigungen eurer App anzeigt und eine Zustimmung der Anwenderin erfordert.
-
-Screentshot, Delegated und App
 
 ## Es geht ans Eingemachte: Befreiung der OneNotes!
 
@@ -125,7 +126,7 @@ param
     [Parameter(ParameterSetName = 'Notebook')]
     [Parameter(ParameterSetName = 'All')]
     [string]
-    $OneDriveAppClientId = '812899b7-584c-4812-8aee-11d3e164d58b',
+    $OneNoteAppClientId = '812899b7-584c-4812-8aee-11d3e164d58b',
 
     [string]
     $User = 'me',
@@ -246,7 +247,7 @@ foreach ($book in $notebooks)
 }
 ```
 
-Den vollständigen Code findet ihr auf GitHub:
+Den vollständigen Code findet ihr auf GitHub: <https://github.com/nyanhp/freeing-onenote>
 
 Viel Spaß bei der Befreiung von OneNote! Macht mit eurem Markdown, was ihr wollt. Meine
 persönliche Empfehlung ist ganz klar Obsidian, was ihr kostenfrei unter <https://obsidian.md>
