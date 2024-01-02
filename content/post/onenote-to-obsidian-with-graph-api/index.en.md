@@ -1,6 +1,6 @@
 ---
 title: "OneNote to Obsidian With Graph Api"
-date: 2024-01-05T15:00:00+01:00
+date: 2024-01-01T15:00:00+01:00
 draft: false
 tags:
   - Azure
@@ -16,7 +16,9 @@ categories:
 
 # Free OneNote! ✊
 
-Due to a number of related events I once again got the
+Due to a number of related events (My entire OneDrive content was placed in
+the recycling bin twice by an app, losing my OneNote sharing settings each
+time) I once again got the
 notion to replace OneNote with something open and non-proprietary. Since
 I was using Obsidian for my personal knowledge management and note taking
 for a while now, markdown was going to be that format.

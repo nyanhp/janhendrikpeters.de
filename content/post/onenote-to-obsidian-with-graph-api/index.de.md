@@ -1,6 +1,6 @@
 ---
 title: "OneNote zu Obsidian mit der Graph Api"
-date: 2024-01-05T15:00:00+01:00
+date: 2024-01-01T15:00:00+01:00
 draft: false
 tags:
   - Azure
@@ -16,7 +16,9 @@ categories:
 
 # Befreit OneNote! ✊
 
-Durch eine Verkettung sonderbarer Zwischenfälle kam ich mal
+Durch eine Verkettung sonderbarer Zwischenfälle (OneDrive zwei mal durch eine Anwendung
+komplett in Papierkorb geschoben, damit die Einstellungen zum Teilen meiner OneNotes
+verschwunden) kam ich mal
 wieder auf die Idee, meinen OneNote-Content in ein offenes
 Format zu bringen. Da ich schon eine Weile Obsidian zum Wissensmanagement
 nutze, lag Markdown als Zielformat nah.
@@ -43,7 +45,7 @@ Um auf die Graph API zugreifen zu können, wird eine Resource benötigt, die
 die gewünschten Berechtigungen beschreibt - eine App Registration, aus der später
 unter Umständen eine Enterprise App wird.
 
-![Screenshot showing the multi-tenant app usage enabled](./app_reg_multitenant.png)
+![Screenshot der die AppRegistration mit Unterstuetzung fuer Multi-tenant zeigt](./app_reg_multitenant.png)
 
 Um auch für eure persönlichen OneNotes einen Export zu ermöglichen,
 sollte die App Registration Multi-Tenant-fähig sein. Ist sie dies nicht,
@@ -54,7 +56,7 @@ Zu letzt sollten noch die Graph-Berechtigungen eurer neuen App als
 Delegated Permissions eingetragen werden. Um OneNote zu befreien, genügen
 notes.read.all.
 
-![Screenshot of delegated permissions to access OneNote notebooks](./app_reg_delegated.png)
+![Screenshot der delegierten Berechtigungen um auf OneNote notebooks zuzugreifen](./app_reg_delegated.png)
 
 ### Delegated Permissions versus Application Permissions
 
