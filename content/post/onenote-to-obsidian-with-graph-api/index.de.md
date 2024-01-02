@@ -1,7 +1,7 @@
 ---
 title: "OneNote zu Obsidian mit der Graph Api"
-date: 2023-12-23T16:36:03+01:00
-draft: true
+date: 2024-01-05T15:00:00+01:00
+draft: false
 tags:
   - Azure
   - Entra
@@ -65,7 +65,7 @@ aufzuräumen.
 
 Delegated Permissions beschreiben Berechtigungen auf Ressourcen, auf die
 die Anwenderin bereits Zugriff hat. Wird beispielsweise die relativ hohe Berechtigung
-User.Read.All vergeben, bedeutet es nicht, dass alle User ausgelesen werden können.
+User.Read.All vergeben, bedeutet nicht, dass alle User ausgelesen werden können.
 
 Ebenso bedeutet die Berechtigung notes.read.all nur, dass die Anwenderin ihre und
 für sie freigegebene OneNotes lesen kann.
@@ -92,7 +92,7 @@ Authentifizierungs-Abläufe benötigen eine Client ID und eine Tenant ID. Moment
 ist die Tenant ID nicht üblicherweise etwas, was einzigartig pro Entra Tenant ist und
 nicht öffentlich kommuniziert wird? Wie kann damit denn ein persönliches OneNote
 abgefragt werden? Tja! In der Graph Doku gibt es die Antwort - 
-mit der Tenant ID Common geht es hier weiter.
+mit der Tenant ID `Common` geht es hier weiter.
 
 Die Client ID der App Registration müsst ihr euren Anwenderinnen jedoch mitteilen, bzw. 
 die Client ID fest in eurer App Config (C#) oder PowerShell config (PSFramework) konfigurieren.
@@ -105,7 +105,7 @@ Die Anforderungen an unseren kleinen Exporter sind nicht umfangreich:
 - 1-n Notebooks oder alle Notebooks abrufen
 - In einen Output-Ordner werden pro Notebook und Sektion Unterordner angelegt
 - Pro Page wird eine Markdown-Datei erstellt
-- Eingebettete Bilder werden heruntergeladen und in einen Unterorder resources abgelegt und verlinkt
+- Eingebettete Bilder werden heruntergeladen und in einen Unterordner resources abgelegt und verlinkt
 
 Aus diesen Informationen können wir schon mal die Parameter erzeugen. Einige sinnvolle
 Standardwerte wie Tenant ID und Client ID, und schon ist das Cmdlet fertig. Die User ID me
@@ -203,6 +203,7 @@ Werkzeug für den Job!
 ```powershell
 foreach ($book in $notebooks)
 {
+    Write-Verbose -Message "Exporting notebook $($book.displayName)"
     $bookPath = Join-Path -Path $Path -ChildPath $book.displayName
     $sections = Invoke-GraphRequest -Query "$($User)/onenote/notebooks/$($book.id)/sections"
     if (-not (Test-Path -Path $bookPath))
@@ -212,16 +213,19 @@ foreach ($book in $notebooks)
 
     foreach ($section in $sections)
     {
+        Write-Verbose -Message "Exporting section $($section.displayName)"
         $sectionPath = Join-Path -Path $bookPath -ChildPath $section.displayName
         if (-not (Test-Path -Path $sectionPath))
         {
             $null = New-Item -Path $sectionPath -ItemType Directory -Force
         }
         $pages = Invoke-GraphRequest -Query "$($User)/onenote/sections/$($section.id)/pages"
-        
+
         foreach ($page in $pages)
         {
-            $pagePath = Join-Path -Path $sectionPath -ChildPath "$($page.title).md"
+            Write-Verbose -Message "Exporting page $($page.title)"
+            $sanitizedTitle = $page.title -replace '[\\\/\:\*\?\"\<\>\|]', '_'
+            $pagePath = Join-Path -Path $sectionPath -ChildPath "$($page.createdDateTime.ToString('yyyy-MM-dd'))_$($sanitizedTitle).md"
             $content = Invoke-GraphRequest -Query "$($User)/onenote/pages/$($page.id)/content"
             $imgCount = 0
             foreach ($image in $content.SelectNodes("//img"))
@@ -229,7 +233,7 @@ foreach ($book in $notebooks)
                 $header = @{
                     Authorization = "Bearer $token"
                 }
-                $imgName = '{0}_{1:d10}.png' -f $page.title, $imgCount
+                $imgName = '{0}_{1:d10}.png' -f $sanitizedTitle, $imgCount
                 $imgPath = Join-Path -Path $sectionPath -ChildPath resources
                 if (-not (Test-Path -Path $imgPath))
                 {
@@ -239,6 +243,7 @@ foreach ($book in $notebooks)
                 Invoke-RestMethod -Method Get -Uri $image.'data-fullres-src' -Headers $header -OutFile (Join-Path $imgPath $imgName)
 
                 $image.src = [uri]::EscapeUriString(('./resources/{1}' -f $section.displayName, $imgName))
+                $imgCount++
             }
 
             $content.OuterXml | ConvertFrom-HTMLToMarkdown -DestinationPath $pagePath -Format

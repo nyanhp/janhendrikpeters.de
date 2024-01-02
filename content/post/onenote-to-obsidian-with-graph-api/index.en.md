@@ -1,7 +1,7 @@
 ---
 title: "OneNote to Obsidian With Graph Api"
-date: 2023-12-23T16:35:59+01:00
-draft: true
+date: 2024-01-05T15:00:00+01:00
+draft: false
 tags:
   - Azure
   - Entra
@@ -17,13 +17,13 @@ categories:
 # Free OneNote! ✊
 
 Due to a number of related events I once again got the
-notion to replace OneNote with something open and non-proprietory. Since
+notion to replace OneNote with something open and non-proprietary. Since
 I was using Obsidian for my personal knowledge management and note taking
 for a while now, markdown was going to be that format.
 
 A short internet search netted no serious results apart from some
-fiddling around with pandoc, exported notebooks and a lot of manual interacation.
-Not very useful. What I would have wanted, was something using the Graph API
+fiddling around with pandoc, exported notebooks and a lot of manual interaction.
+Not very useful. What I would have wanted was something using the Graph API
 (<https://learn.microsoft.com/en-us/graph/overview>).
 
 >**Graph what now?**  
@@ -32,7 +32,7 @@ Not very useful. What I would have wanted, was something using the Graph API
 >with which all administrative tasks can be automated.
 >Accessing graph is done through an app registration in Entra ID.
 
-In this very moment it dawned on me, that my esteemed colleague
+At this very moment it dawned on me that my esteemed colleague
 [Friedrich Weinmann](https://github.com/friedrichweinmann/minigraph) with
 his MiniGraph module did most of the work that I can't be asked to do:
 Authenticating with Entra ID.
@@ -86,7 +86,7 @@ To this end, Connect-GraphBrowser and Connect-GraphDeviceCode exist. Both authen
 flows still require tenant ID and client ID though. Hold on... Isn't the tenant ID
 usually unique per tenant and not communicated far and wide? How can you even access
 you personal OneNote with a corporate tenant? Well, you can't. This is where the
-documentation comes in handy. The tenant ID Common can be used in lieue of an
+documentation comes in handy. The tenant ID `Common` can be used in lieu of an
 Entra tenant.
 
 You still need to include your app's Client ID or tell it to your users. In C# this
@@ -142,7 +142,7 @@ param
 #requires -Module MarkdownPrince
 ```
 
-The modules MiniGraph and MarkdownPrince are used here as to 
+The modules MiniGraph and MarkdownPrince are used here so as to 
 not reinvent the wheel. We just need to add a few simple loops and
 we're done.
 
@@ -203,6 +203,7 @@ to write the content. The best tool for the job at hand!
 ```powershell
 foreach ($book in $notebooks)
 {
+    Write-Verbose -Message "Exporting notebook $($book.displayName)"
     $bookPath = Join-Path -Path $Path -ChildPath $book.displayName
     $sections = Invoke-GraphRequest -Query "$($User)/onenote/notebooks/$($book.id)/sections"
     if (-not (Test-Path -Path $bookPath))
@@ -212,16 +213,19 @@ foreach ($book in $notebooks)
 
     foreach ($section in $sections)
     {
+        Write-Verbose -Message "Exporting section $($section.displayName)"
         $sectionPath = Join-Path -Path $bookPath -ChildPath $section.displayName
         if (-not (Test-Path -Path $sectionPath))
         {
             $null = New-Item -Path $sectionPath -ItemType Directory -Force
         }
         $pages = Invoke-GraphRequest -Query "$($User)/onenote/sections/$($section.id)/pages"
-        
+
         foreach ($page in $pages)
         {
-            $pagePath = Join-Path -Path $sectionPath -ChildPath "$($page.title).md"
+            Write-Verbose -Message "Exporting page $($page.title)"
+            $sanitizedTitle = $page.title -replace '[\\\/\:\*\?\"\<\>\|]', '_'
+            $pagePath = Join-Path -Path $sectionPath -ChildPath "$($page.createdDateTime.ToString('yyyy-MM-dd'))_$($sanitizedTitle).md"
             $content = Invoke-GraphRequest -Query "$($User)/onenote/pages/$($page.id)/content"
             $imgCount = 0
             foreach ($image in $content.SelectNodes("//img"))
@@ -229,7 +233,7 @@ foreach ($book in $notebooks)
                 $header = @{
                     Authorization = "Bearer $token"
                 }
-                $imgName = '{0}_{1:d10}.png' -f $page.title, $imgCount
+                $imgName = '{0}_{1:d10}.png' -f $sanitizedTitle, $imgCount
                 $imgPath = Join-Path -Path $sectionPath -ChildPath resources
                 if (-not (Test-Path -Path $imgPath))
                 {
@@ -239,6 +243,7 @@ foreach ($book in $notebooks)
                 Invoke-RestMethod -Method Get -Uri $image.'data-fullres-src' -Headers $header -OutFile (Join-Path $imgPath $imgName)
 
                 $image.src = [uri]::EscapeUriString(('./resources/{1}' -f $section.displayName, $imgName))
+                $imgCount++
             }
 
             $content.OuterXml | ConvertFrom-HTMLToMarkdown -DestinationPath $pagePath -Format
