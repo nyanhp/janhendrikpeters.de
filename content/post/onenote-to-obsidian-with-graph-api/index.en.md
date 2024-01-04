@@ -53,27 +53,28 @@ app need to be invited to your tenant (B2C). Using the app within
 the confines of your personal account will not be possible.
 
 Last but not least, we need to configure the necessary Graph permissions as
-delegated permissions. To free OneNote, notes.read.all is sufficient.
+delegated permissions. To free OneNote, `notes.read.all` is sufficient.
 
 ![Screenshot of delegated permissions to access OneNote notebooks](./app_reg_delegated.png)
 
 ### Delegated Permissions versus Application Permissions
 
-Delegated permissions describe permissions on resources that the user already
-has access to. If for example the rather privileged permission user.read.all is
-configured, it does not automatically mean that the user can suddenly read all
-Entra accounts.
-
-Likewise, notes.read.all only means that the user can access their own OneNotes
-as well as OneNotes shared with them (or rather: accessible to them).
+Delegated permissions describe permissions on resources on behalf of a user. For
+some permissions like our `notes.read.all` it means that the user can access their own OneNotes
+as well as OneNotes shared with them (or rather: accessible to them). <https://learn.microsoft.com/en-us/graph/permissions-reference#notesreadall>
 
 Thinking of the ancient on-premises Active Directory, the equivalent would
 be impersonation: One account acts on behalf of another.
 
 Application permissions on the other hand describe permissions of the app registration
-itself. If the app is permitted to read all user accounts, all users of your
+itself, without a user involved. If the app is permitted to read all user accounts, all users of your
 app will be able to read all accounts. This can have far-reaching and unforseen
 consequences.
+
+Some permissions require Admin Consent and cannot be used for user-specific actions. Accessing
+OneNote is not one of those. User.Read also does not require admin consent, as the
+user reads their own profile. User.Read.All on the other hand requires admin consent
+with the user with delegated access being able to read all accounts. <https://learn.microsoft.com/en-us/graph/permissions-reference#userreadall>
 
 ## Authenticating with MiniGraph - Device Code Flow
 

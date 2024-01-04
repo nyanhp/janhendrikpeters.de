@@ -60,24 +60,20 @@ notes.read.all.
 
 ### Delegated Permissions versus Application Permissions
 
-Nein, technische Begriffe übersetze ich nicht. Wenn euer Azure-Portal auf
-Deutsch eingestellt ist, habe ich großes Mitleid und ein wenig Unverständnis. Dennoch
-sollten wir die beiden Begrifflichkeiten klären, um mit eventuellen Missverständnissen
-aufzuräumen.
-
-Delegated Permissions beschreiben Berechtigungen auf Ressourcen, auf die
-die Anwenderin bereits Zugriff hat. Wird beispielsweise die relativ hohe Berechtigung
-User.Read.All vergeben, bedeutet nicht, dass alle User ausgelesen werden können.
-
-Ebenso bedeutet die Berechtigung notes.read.all nur, dass die Anwenderin ihre und
-für sie freigegebene OneNotes lesen kann.
+Delegated permissions beschreiben Berechtigungen im Kontext eines Benutzers.
+Berechtigungen wie unser `notes.read.all` bedeuten, dass ein Benutzer seine
+und mit ihm oder ihr geteilte OneNotes lesen kann. <https://learn.microsoft.com/en-us/graph/permissions-reference#notesreadall>
 
 In der alten Welt des On-Premises Active Directory wäre das vergleichbar mit Impersonation.
 Ein Account handelt im Namen eines anderen Accounts.
 
-Application Permissions beschreiben Berechtigungen der App Registration selbst,
-im Kontext ebendieser! Eine Berechtigung User.Read.All kann hier weitreichenden Zugriff
-zur Folge haben.
+Application permissions beschreiben Berechtigungen der App selbst, ohne einen Nutzer.
+Ist die App berechtigt, alle Ressourcen eines Typs zu lesen, können Nutzer der App dies auch. Vergleichbar
+wäre diese Art der Berechtigung beispielsweise mit einem Dienst oder daemon.
+
+Einige Berechtigungen erfordern Admin Consent. Der Zugriff auf OneNote gehört nicht dazu. User.Read 
+ebenfalls nicht, da nur das eigene Profil gelesen wird. User.Read.All andererseits
+berechtigt dazu, alle Benutzerkonten zu lesen. <https://learn.microsoft.com/en-us/graph/permissions-reference#userreadall>
 
 ## Authentifizierung mit MiniGraph - Device Code Flow
 
