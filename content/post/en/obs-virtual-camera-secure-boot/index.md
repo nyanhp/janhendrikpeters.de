@@ -100,11 +100,11 @@ sudo mokutil --import public_key.der
 
 Now you can reboot your machine. During your normal boot process a window will open prompting you to enroll your MOK. It should look similar to what I received.
 
-![MOK management screen with Enroll MOK selected](mokenroll.png)
+![MOK management screen with Enroll MOK selected](/img/obs-virtual-camera-secure-boot/mokenroll.png)
 
 Simply navigate through the screens until you are prompted for your password.
 
-[MOK enrollment screen showing the selected machine owner key to import](mokenroll2.png)
+[MOK enrollment screen showing the selected machine owner key to import](/img/obs-virtual-camera-secure-boot/mokenroll2.png)
 
 From here on, you can compile, sign and import any kernel module you desire, without disabling Secure Boot and without tainting the kernel. But please, keep your private key safe and backed up.
 

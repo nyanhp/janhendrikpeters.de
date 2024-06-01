@@ -30,12 +30,19 @@ So, how do you start with a task like this? Well, first of all examining the sou
 
 First of all, we should import the data as an XmlDocument. Casting with the type accelerator xml does exactly that. If you examine the output on the console and with our trusty friend, the Get-Member cmdlet, you will notice this as well.
 
+![The output of Get-Member for the imported XML content](/img/converting-group-policy-to-dsc-configuration/001getmember.png)
 
-The output of Get-Member for the imported XML content
+{{< figure src=/img/converting-group-policy-to-dsc-configuration/001getmember.png  >}}
+
+
 XPATH works with selector strings, so to get to the registry settings, we could apply the XPATH expression “/PolicyRules/ComputerConfig”. This is a simple one – all ComputerConfig nodes in the XML document will be returned. The best thing is: All child nodes can be accessed by their name through dot-notation, just like an object property.
 
 
-Dot-notation on XML documents
+
+![Dot-notation on XML documents](/img/converting-group-policy-to-dsc-configuration/002xml.png)
+
+{{< figure src=/img/converting-group-policy-to-dsc-configuration/002xml.png  >}}
+
 Similarly, we can access the other entries. This time, the XPATH filter needs some more logic. The privilege rights for example are not accessible by normal means. Instead we need to filter on an XML attribute called Section with the value “Privilege Rights”. The resulting XPATH expressions looks like this: /PolicyRules/SecurityTemplate[@Section = “Privilege Rights”]/LineItem
 
 The XPATH expression filters all SecurityTemplate nodes by examining their attribute Section. This is a pretty simple expression. For a more complex example, checkout chapter 12 of my book “PowerShell Core 6.2 Cook Book”, where I use XPATH to efficiently filter the Windows event log.

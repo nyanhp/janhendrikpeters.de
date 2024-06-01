@@ -43,7 +43,7 @@ The book encourages you to really get a good measure of yourself before and afte
 
 During the second time I took the challenge, the weight loss slowed down a bit. This I had already expected before starting, so it did not really surprise me. I still got great results, week after week. When I ended challenge 2, I was at 105kg weight. This is when I started measuring my body fat content.
 
-![Weight trend diagram indicating a strong downward trend in April](90dayweight.png)
+![Weight trend diagram indicating a strong downward trend in April](/img/the-90-day-challenge-my-experience/90dayweight.png)
 
 My new goal is not weight-based, but rather based on the amount of body fat. I am trying to reach 10-15% body fat, which would make me extremely happy. My nutrition has not really changed during the three iterations of the challenge. I still do not eat sugar and I am very wary of processed flour. What I do eat is lots of vegetables, every now and then meat from the farms around my home and eggs. Lots. Of. Eggs.
 

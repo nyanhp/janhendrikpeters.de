@@ -113,11 +113,11 @@ But that was the simple and well-documented part. The not-so-well-documented par
 
 With the developer console opened, just add a server by using the lab credentials that have been used during lab deployment.
 
-![Connecting a machine](WAC_AddServer.png)
+![Connecting a machine](/img/automating-windows-admin-center/WAC_AddServer.png)
 
 While the connection is being initiated you will see several requests in the developer console. Have a look for the entry “connections” – this is the API endpoint we are looking for. Using the developer console you can examine the actual request content.
 
-![Examining a request](WAC_Chrome.png)
+![Examining a request](/img/automating-windows-admin-center/WAC_Chrome.png)
 
 In the request, we can see the API endpoint used called “api/connections” with the method PUT. The request body is visible as well. This is a very simple JSON structure that translates to an array of hashtables in PowerShell.
 

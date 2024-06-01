@@ -99,10 +99,10 @@ My module GpoToDsc in this case creates one MOF for each baseline. Each resource
 
 Once the lab deployment has finished, a report should already have been generated. So just open the PowerBI report you can find on the desktop and refresh the data. You should see something similar to the following:
 
-![Pie chart showing 100% comppliance](dscea.png)
+![Pie chart showing 100% comppliance](/img/converting-group-policy-to-dsc-part-2/dscea.png)
 
 Whereas DSCFS1 should look slightly different:
 
-![Pie chart showing 12% comppliance](dscea1.png)
+![Pie chart showing 12% comppliance](/img/converting-group-policy-to-dsc-part-2/dscea1.png)
 
 There you go. From GPO to DSC configuration in an arbitrary number of probably easy steps!

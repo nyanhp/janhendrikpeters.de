@@ -89,4 +89,4 @@ As a little motivation: Even on the worst days, starting the warm-up gave me the
 
 The following pictures were taken two weeks into the challenge, on day 90 and on day 180. The frontal view does not do the success credit, though, as does the soft lighting. But I can now enter and exit all of my pants without undoing them. My very first suit fits again. I had to buy new belts, and once I am at below 15% body weight I will get my business clothes re-tailored.
 
-![Pictures of a guy in his mid-thirtys getting progressively thinner](beforeandafter.png)
+![Pictures of a guy in his mid-thirtys getting progressively thinner](/img/pics-or-it-didnt-happen/beforeandafter.png)

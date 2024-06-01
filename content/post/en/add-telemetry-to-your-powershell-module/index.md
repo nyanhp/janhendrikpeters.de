@@ -49,7 +49,7 @@ Set-PSFConfig -Module 'TelemetryHelper' -Name 'YOURMODULENAME.ApplicationInsight
 
 After setting up the instrumentation key, you can already start tracking. To track telemetry, the cmdlets Send-THTrace, THMetric and THEvent can be used. When called for the very first time in a session, an instance of the TelemetryClient .NET class will be stored for you and reused during the session. If you want to see if telemetry can be sent (i.e. User has opted in), you can use the Get-THTelemetryConfiguration cmdlet.
 
-![You should see something similar](ApiKey-768x105.png)
+![You should see something similar](/img/add-telemetry-to-your-powershell-module/ApiKey-768x105.png)
 
 ### Tracking an event
 
@@ -89,16 +89,16 @@ Send-THEvent -EventName ModuleImportEvent -PropertiesHash $eventProperties  -Mod
 In this example, an event with the name ModuleImportEvent is generated, with two hashtables containing properties and metrics. The name of the event will be visible in the exported data and in the metrics stream you can access.
 
 
-![Navigating to Logs](AnalyticsQuery1-300x228.png)
+![Navigating to Logs](/img/add-telemetry-to-your-powershell-module/AnalyticsQuery1-300x228.png)
 
 Head on over to Logs and then select customEvents – you should be able to see your data a few seconds after sending it.
 
-![The module import events are visible in the query window](AnalyticsQuery-768x195.png)
+![The module import events are visible in the query window](/img/add-telemetry-to-your-powershell-module/AnalyticsQuery-768x195.png)
 
 ### Persisting metrics
 
 As you have seen in the last screenshot, the data is essentially stored as JSON content. To persist your data for a more than 90 days, continuous export is quite useful. Select “Continuous Export” and configure a blob storage container to receive your module's telemetry. You can (and probably should) configure multiple blob containers in the same storage account, so that each of your modules will have a dedicated storage container.
 
-![There is no need to select every data type, since we only use Traces, Metrics and Events](ContinuousExport-768x305.png)
+![There is no need to select every data type, since we only use Traces, Metrics and Events](/img/add-telemetry-to-your-powershell-module/ContinuousExport-768x305.png)
 
 Now every trace sent will automatically be exported to your storage account. Stay tuned for the next post where we will further process the data into a SQL database and build some beautiful reports in Power BI – In the meantime get started with telemetry for your own module!
