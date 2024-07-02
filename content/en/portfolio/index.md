@@ -1,16 +1,15 @@
 ---
 title: "My portfolio"
-date: 2023-04-19T20:50:34+02:00
+date: 2023-04-18T10:31:55+02:00
 draft: false
+disable_share: true
 ---
 
-## My portfolio
+## Certs
 
-### Certs
+Lots! You can find them here: <https://www.credly.com/users/jan-hendrik-peters/badges> and here: <https://learn.microsoft.com/en-us/users/nyanhp/transcript/vpmq8amq008nqex>
 
-Lots! You can find them here: <https://www.credly.com/users/jan-hendrik-peters/badges>
-
-### Development
+## Development
 
 Free code for everyone is important to me. Whenever I am able to, I'll contribute
 to open-source projects. Sometimes, I am a bit more involved:
@@ -21,7 +20,7 @@ to open-source projects. Sometimes, I am a bit more involved:
 - https://github.com/nyanhp/pstranslate: Translations (using cloud services) in PowerShell - no, this site
 is translated by me personally...
 
-### Talks
+## Talks
 
 Apart from publicly available recordings of my talks, I also talked at the Nordic Infrastructure Conference, 
 PowerShell Conference Asia in Singapore und Bangalore as well as at internal Microsoft conferences for 
@@ -34,7 +33,7 @@ audiences up to 200 people.
 - PowerShell Conference Europe 2018: [Hands-on JEA](https://www.youtube.com/watch?v=K1c3BY7bw4c)
 - PowerShell Conference Europe 2017: PowerShell on Linux, Lab Automation with Automated Lab (no recording)
 
-### Publications
+## Publications
 
 Slightly older but the principles still apply:
 

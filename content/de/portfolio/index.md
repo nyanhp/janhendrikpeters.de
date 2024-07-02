@@ -1,14 +1,15 @@
 ---
 title: "Mein Portfolio"
-date: 2023-04-19T20:50:18+02:00
+date: 2023-04-18T10:31:55+02:00
 draft: false
+disable_share: true
 ---
 
 ## Mein Portfolio
 
 ### Zertifizierungen
 
-Allerhand - in der Regel hier: <https://www.credly.com/users/jan-hendrik-peters/badges>
+Allerhand - in der Regel hier: <https://www.credly.com/users/jan-hendrik-peters/badges> und neuerdings hier: <https://learn.microsoft.com/en-us/users/nyanhp/transcript/vpmq8amq008nqex>
 
 ### Entwicklungsprojekte
 
@@ -41,6 +42,6 @@ Ein wenig in die Jahre gekommen, aber weiterhin gültig:
 - Learn PowerShell Core 6.0
   - [Packt](https://www.packtpub.com/eu/networking-and-servers/learn-powershell-core-60)
   - [Amazon](https://www.amazon.com/Learn-PowerShell-Core-6-0-administrative/dp/178883898X)
-- PowerShell Core 6.2 Cookbook (Nicht mit Lee Holmes' großertigem Cookbook verwechseln!)
+- PowerShell Core 6.2 Cookbook (Nicht mit Lee Holmes' großartigem Cookbook verwechseln!)
   - [Packt](https://www.packtpub.com/eu/networking-and-servers/powershell-core-62-cookbook)
   - [Amazon](https://www.amazon.com/Powershell-Core-6-2-Cookbook-command-line/dp/1789803306)
