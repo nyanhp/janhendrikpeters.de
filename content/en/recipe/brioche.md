@@ -61,6 +61,7 @@ draft: false
 - Let cool in the opened oven for 10-15 minutes, then tip it out onto a wire rack and let cool completely
 
 Enjoy! The roux ensures that more water can be added to the dough. The original recipe only had about 60% hydration, whereas a yudane/yukone/tangzhong dough
-should aim for 75% - a lot! By using the roux, your brioche (and other baked goods) remain fresh and moist for longer. It's not a big hassle, as well! Cooking the roux takes no more than five minutes, and you can prepare it beforehand and put it in the fridge. 
+should aim for 75% - a lot! By using the roux, your brioche (and other baked goods) remain fresh and moist for longer. It's not a big hassle, as well! Cooking the roux takes no more than five minutes, and you can prepare it beforehand and put it in the fridge.
+
 The flour to liquid ratio is 1:5 (25g of flour equals 125g of coconut milk), and both ingredients are subtracted from the ingredients of your recipe! Zack, feddich, as we say.
 With a little math, you should then increase hydration to 75%. Example: 500g flour, 250g milk, 1 egg equals 60% hydration (300g / 500g = 0.6). So to get to 75%, we need an additional 75g of fluid!

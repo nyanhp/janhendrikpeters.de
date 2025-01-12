@@ -61,5 +61,7 @@ draft: false
 - Im geöffneten Ofen 10-15 Minuten abkühlen lassen, dann auf ein Kuchengitter kippen und vollständig abkühlen lassen
 
 Und nun: Genießen! Durch die Mehlschwitze (Naja, KOCHSTÜCK, also etwas fester) lässt sich mehr Flüssigkeit im Teig unterbringen. Das Originalrezept hatte einen Flüssigkeitsanteil von 60%, wohingegen ein Yukone bzw. Tangzhong bzw. KOCHSTÜCK-Teig 75% Flüssigkeit nutzt. Eine ganze Menge!
+
 Durch diese Art, den Teig herzustellen, bleibt dein Gebäck länger frisch und saftig. Bei diesem Brioche länger als du brauchst, um es zu essen... Das Kochstück herzustellen macht keine Mühe, und ist eine Sache von weniger als 5 Minuten. Zudem kann man es in großen Mengen vorbereiten und im Kühlschrank aufbewahren. Das Verhältnis Mehl zu Flüssigkeit ist 1:5 (25g Mehl entsprechen 125g Kokosmilch), und beide Zutaten werden aus den Zutaten deines Rezeptes herausgerechnet! Zack, fertig.
+
 Mit ein wenig Mathematik solltest du im Anschluss die Hydration auf 75% anheben. Beispiel: 500g Mehl, 250g Milch, 1 Ei entsprechen 60% Hydration (300g / 500g = 0.6). Um auf 75% zu kommen, brauchen wir also zusätzlich noch 75g Flüssigkeit!
