@@ -1,9 +1,9 @@
 ---
 title: "Brioche"
-date: 2024-06-01T14:52:22+02:00
+date: 2025-01-12T11:52:22+01:00
 description: "Das fluffigste vegane Brioche, dank yukone/yudane/tangzhong oder auf hartem Deutsch 'KOCHSTÜCK'!"
 tags:
-  - 
+tags: []
 categories:
   - recipe
   - yeast
@@ -11,8 +11,6 @@ categories:
   - yukone
 draft: false
 ---
-
-## Zutaten
 
 ## Hilfsmittel
 
@@ -22,6 +20,8 @@ draft: false
 - Große Schüssel
 - Esslöffel
 - Teelöffel
+
+## Zutaten
 
 ### Mehlschwitze, KOCHSTÜCK, Yukone, Tangzhong
 

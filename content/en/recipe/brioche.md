@@ -1,9 +1,8 @@
 ---
 title: "Brioche"
-date: 2024-06-01T14:52:22+02:00
+date: 2025-01-12T11:52:22+01:00
 description: "The fluffiest vegan brioche, thanks to yukone/yudane/tangzhong dough!"
-tags:
-  - 
+tags: []
 categories:
   - recipe
   - yeast
@@ -11,8 +10,6 @@ categories:
   - yukone
 draft: false
 ---
-
-## Ingredients
 
 ## Tools
 
@@ -22,6 +19,8 @@ draft: false
 - Large bowl
 - Tablespoon
 - Teaspoon
+
+## Ingredients
 
 ### Roux, Yukone, Tangzhong
 
