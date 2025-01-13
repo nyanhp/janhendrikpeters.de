@@ -14,9 +14,8 @@ Hi there :wave:
 I am named after this site, work in IT, but would rather be doing other stuff:
 - Brewing beer (!)
 - Blacksmithing
-- Smoking (meats, cheeses, ...)
+- Pen&Paper (Das Schwarze Auge)
 - Baking
-- VFR flight
 - Sports
 
 If I do develop, it's usually for <https://automatedlab.org> or in the [DSC Community](https://dsccommunity.org).

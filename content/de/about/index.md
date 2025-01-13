@@ -15,9 +15,8 @@ Moin :wave:
 Ich heiße so wie diese Seite, bin seit ich arbeite in der IT unterwegs, mache aber eigentlich lieber anderen Kram:
 - Bier brauen (!)
 - Schmieden
-- Räuchern
+- Pen&Paper (Das Schwarze Auge)
 - Backen
-- Fliegen
 - Sport
 
 Wenn ich dann doch programmiere, passiert das in <https://automatedlab.org> oder in der [DSC Community](https://dsccommunity.org).
