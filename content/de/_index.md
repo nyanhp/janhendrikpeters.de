@@ -5,6 +5,6 @@ description: "Viel Spaß mit den Inhalten! Ich habe keine Zeit, Kommentare zu mo
 
 theme_version: '2.8.2'
 disable_share: true
+featured_image: title.jpeg
 ---
-Willkommen auf meinem Blog. Stück für Stück werden hier meine Notizen zu vergangenen IT-Projekten landen, aber auch ein paar Rezepte. Ist eine gemischte
-Tüte, also viel Spaß damit.
+Willkommen auf meinem Blog. Stück für Stück werden hier meine Notizen zu vergangenen IT-Projekten landen, aber auch ein paar Rezepte. Ist eine gemischte Tüte, also viel Spaß damit.
