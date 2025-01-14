@@ -31,7 +31,7 @@ params:
           - mastodon
           - linkedin
       github:
-        username: github
+        username: nyanhp
       mastodon:
         username: nyanhp
         profilelink: https://metalhead.club/@nyanhp
