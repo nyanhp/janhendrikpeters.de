@@ -29,14 +29,13 @@ params:
         networks:
           - github
           - mastodon
-      gpg:
-        label: GPG
-        url: https://keys.openpgp.org/vks/v1/by-fingerprint/1B65D90FDB7A578E7D81CB14FE998908CF4006EA
+          - linkedin
       github:
-        url: "https://github.com/nyanhp"
+        username: github
       mastodon:
-        url: https://metalhead.club/@nyanhp
-      rel: me noopener
+        username: nyanhp
+        profilelink: https://metalhead.club/@nyanhp
+        rel: me
       linkedin:
         profilelink: https://www.linkedin.com/in/jan-hendrik-peters-251392139
 
@@ -54,6 +53,10 @@ languages:
       
     menu:
       main:
+        - identifier: GPG
+          name: GPG
+          url: https://keys.openpgp.org/vks/v1/by-fingerprint/1B65D90FDB7A578E7D81CB14FE998908CF4006EA
+          weight: 40
         - identifier: "about"
           name: "About"
           url: "/about/"
@@ -85,6 +88,10 @@ languages:
 
     menu:
       main:
+        - identifier: GPG
+          name: GPG
+          url: https://keys.openpgp.org/vks/v1/by-fingerprint/1B65D90FDB7A578E7D81CB14FE998908CF4006EA
+          weight: 40
         - identifier: "about"
           name: "Über"
           url: "/de/about/"
