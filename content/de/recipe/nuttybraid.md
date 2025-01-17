@@ -1,6 +1,6 @@
 ---
 title: "Nussstriezel"
-date: 2025-01-17T17:32:22+01:00
+date: 2025-01-17T14:32:22+01:00
 description: "Eine Weiterentwicklung meines Brioche: Ein Zop mit Nussfüllung"
 tags: []
 categories:

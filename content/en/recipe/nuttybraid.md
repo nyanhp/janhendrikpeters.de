@@ -1,6 +1,6 @@
 ---
 title: "Nutty braid"
-date: 2025-01-17T17:32:22+01:00
+date: 2025-01-17T14:32:22+01:00
 description: "The evolution of my brioche: A Nussstriezel or nutty braid!"
 tags: []
 categories:
