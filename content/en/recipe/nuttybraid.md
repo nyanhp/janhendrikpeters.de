@@ -22,18 +22,23 @@ draft: false
 
 ## Ingredients
 
-- One recipe {{< ref "brioche" >}}
+- One recipe [brioche]({{< ref "brioche" >}})
 - 65ml plant-based milk, I've used coconut
-- 10ml (2EL) Maple syrup
-- 70-100g brown sugar
+- 10ml (1 Tablespoon) Maple syrup
+- 40-70g brown sugar to taste. 70g was too sweet for me, but I eat no sugar - YMMV
 - 1 teaspoon cinnamon
+- 1 dusting of nutmeg (idk, three or four microplane iterations?)
+- Optional, probably delicious: Green cardamom, anisseed and a clove, gently heated in a pan to draw out the oils and then pulverized in a mortar
 - 200g chopped walnuts, hazelnuts, ...
 - 50g ground walnuts, hazelnuts, ...
 - Juice and zest of half a lemon
 
 ## Method
 
-Craft one {{< ref "brioche" >}}, to the point at which you'd separate the dough into your bread tin. Divide into three pieces.
+Create the nut filling from the non-brioche ingredients by first heating milk, maple syrup, sugar, cinnamon and nutmeg in a
+sauce pan on medium heat. Do not cook, we just want to dissolve the sugar. Dump your nuts in. Set aside to cool.
+
+Craft one [brioche]({{< ref "brioche" >}}), to the point at which you'd separate the dough into your bread tin. Divide into three pieces.
 
 Roll out each piece on a lightly floured surface and spread a third of your nuts on it. Roll up from the long side. The ends may end up
 slightly thinner to make it easier to finish your braid.
