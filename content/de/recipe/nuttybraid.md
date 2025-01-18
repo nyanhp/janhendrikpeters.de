@@ -38,13 +38,26 @@ draft: false
 Aus den Nicht-Brioche-Zutaten eine Füllung bereiten, indem Milch, Ahornsirup, Zucker, Muskat und Zimt erwärmt werden, um alles homogen aufzulösen. Bitte
 nicht kochen. Anschließend die Nüsse reinschmeißen, umrühren, abhaken.
 
-Ein [Brioche]({{< ref "brioche" >}}) anfertigen, bis zu dem Punkt, wo normalerweise der Teig in die Kastenform käme. In drei gleichgroße Teile aufteilen.
+Ein [Brioche]({{< ref "brioche" >}}) anfertigen, bis zu dem Punkt, wo normalerweise der Teig in die Kastenform käme. Zum etwa 30*40cm großen
+Rechteck ausrollen. Mit der Nussmasse bestreichen und von der langen Seite her aufrollen. Mit dem Abschluss nach unten legen.
 
-Die Teigstücke nacheinander ausrollen (Oberfläche leicht mehlen...) und mit einem drittel der Nussmasse bestreichen. Von der langen Seite her
-aufrollen. Die beiden Enden dürfen gerne etwas schlanker sein, um das Flechten zu vereinfachen.
+Um den Zopf zu formen, die Teigrolle der Länge nach komplett durchschneiden, zunächst eine Hälfte. Die nun offenen, nussigen
+Innenseiten zu einem Zopf übereinanderlegen. Jetzt erst die restliche Rolle durchschneiden und genau so weiter
+verfahren, bis ein schön gewickelter Zopf herauskommt.
 
-Sind alle drei Stücke gefüllt, wird ein klassischer Zopf geflochten! Die Enden mit etwas Wasser oder Pflanzenmilch anfeuchten, damit sie leichter
-zusammenkleben.
+Damit die Enden besser halten, kannst du sie mit etwas Wasser oder Pflanzenmilch anfeuchten und sanft zusammendrücken, oder einfach
+unterkrempeln.
 
 Fertig geformten Zopf auf ein Backblech geben und abgedeckt 45 Minuten ruhen lassen. Ofen derweil auf 180° Celsius vorheizen. Im vorgeheizten Ofen
-etwa 45 Minuten backen, oder bis eine Kerntemperatur von 90° Celsius erreicht ist.
+etwa 30-40 Minuten backen, oder bis eine Kerntemperatur von 90° Celsius erreicht ist.
+
+## Bonus
+
+Für einen schönen Glanz ohne lästigen Zucker:
+
+- 5g Stärke (z.B. Kartoffelstärke)
+- 100ml Wasser
+
+Von den 100ml ein bis zwei Esslöffel abnehmen, um die Stärke klumpenfrei anzurühren. Das übrige Wasser kurz aufkochen und unter Rühren
+über die Stärke schütten. Diese Mischung hält sich im Kühlschrank ein paar Tage, und wird heiß auf das direkt aus dem Ofen
+kommende Gebäck aufgepinselt!
