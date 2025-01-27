@@ -23,7 +23,7 @@ draft: false
 ## Zutaten
 
 - Ein Rezept [Brioche]({{< ref "brioche" >}})
-- 65ml Pflanzen-Milch, ich habe Kokosmilch genutzt
+- 65-150ml Pflanzen-Milch, ich habe Kokosmilch genutzt. Milchanteil bestimmt Füllungsabdeckung
 - 10ml (1 Esslöffel) Ahornsirup
 - 40-70g brauner Zucker, nach Geschmack. Mir waren die intialen 70g viel zu süß, aber you do you.
 - 1 Teelöffel Zimt
