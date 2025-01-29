@@ -23,7 +23,7 @@ draft: false
 ## Ingredients
 
 - One recipe [brioche]({{< ref "brioche" >}})
-- 65ml plant-based milk, I've used coconut
+- 65-150ml plant-based milk, I've used coconut. Milk-volume is used to increase filling-to-dough ratio...
 - 10ml (1 Tablespoon) Maple syrup
 - 40-70g brown sugar to taste. 70g was too sweet for me, but I eat no sugar - YMMV
 - 1 teaspoon cinnamon
@@ -57,5 +57,4 @@ For a nice sheen without that stupid sugar:
 - 100ml water
 
 Take one or two tablespoons of your water to mix with the starch, ensuring no clumps
-can form. Boil the rest, and pour it over your starch mix. This slurry keeps in the fridge for a couple of days. To use, heat it up and brush onto your hot-from-the-oven
-bread or other baked good.
+can form. Boil the rest, and pour it over your starch mix. This slurry keeps in the fridge for a couple of days. To use, heat it up and brush onto your hot-from-the-oven bread or other baked good.
