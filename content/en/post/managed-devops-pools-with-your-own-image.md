@@ -416,17 +416,17 @@ variables:
 strategy:
   maxParallel: 4
   matrix:
-    smarttouch-ubuntu-2204-buildagent:
-      BaseName: smarttouch-ubuntu-buildagent
-      ImageName: smarttouch-ubuntu-2204-buildagent
+    jhp-ubuntu-2204-buildagent:
+      BaseName: jhp-ubuntu-buildagent
+      ImageName: jhp-ubuntu-2204-buildagent
       ResourceId: /subscriptions/.../resourceGroups/.../providers/Microsoft.Compute/galleries/.../images/ubuntu-22.04
       Publisher: "Canonical"
       Offer: "0001-com-ubuntu-server-jammy"
       Sku: "22_04-lts-gen2"
       Version: "latest"
-    smarttouch-ubuntu-2404-buildagent:
-      BaseName: smarttouch-ubuntu-buildagent
-      ImageName: smarttouch-ubuntu-2404-buildagent
+    jhp-ubuntu-2404-buildagent:
+      BaseName: jhp-ubuntu-buildagent
+      ImageName: jhp-ubuntu-2404-buildagent
       ResourceId: /subscriptions/.../resourceGroups/.../providers/Microsoft.Compute/galleries/.../images/ubuntu-24.04
       Publisher: "Canonical"
       Offer: "ubuntu-24_04-lts"
