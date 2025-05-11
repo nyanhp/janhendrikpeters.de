@@ -10,13 +10,13 @@ categories:
 draft: false
 ---
 
-## Tools
+## Hilfsmittel
 
 - Großer Topf oder Pfanne
 - Löffel
 - Zwei Backbleche, mit Hartweizengries oder Backpapier
 
-## Ingredients
+## Zutaten
 
 - 1 Rezept [Pizza]({{< ref "pizza" >}}) ohne Belag und Backen...
 - 400g Mangold, mit Stengeln
@@ -27,7 +27,7 @@ draft: false
 - 2 Esslöffel entsteinte schwarze Oliven
 - 40g Stärke (Standard-Kartoffelstärke)
 
-## Method
+## Methode
 
 Füllung kann auch am Vortag vorbereitet werden, sie lässt sich kalt einfacher verarbeiten und läuft nicht direkt aus.
 

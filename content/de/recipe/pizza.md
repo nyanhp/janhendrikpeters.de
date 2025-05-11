@@ -13,13 +13,13 @@ draft: false
 Das Rezept orientiert sich am Pizzarezept in Karen Davies Buch [Savour](http://savourcookbook.com/), was ihr unbedingt kaufen solltet. Ich habe
 es ein wenig an mein übliches Mehl angepasst.
 
-## Tools
+## Hilfsmittel
 
 - Große Schüssel
 - Löffel
 - Ausreichend große Arbeitsfläche oder Standmixer mit Knethaken
 
-## Ingredients
+## Zutaten
 
 - 500g Dinkelmehl. Ich mahle und siebe, es geht aber auch wunderbar mit Dinkel 630
 - 100ml Apfelsaft (100% Saft, nicht die Zuckerplempe)
@@ -29,7 +29,7 @@ es ein wenig an mein übliches Mehl angepasst.
 - 2 Teelöffel Salz
 - 1 Esslöffel Oregano, optional
 
-## Method
+## Methode
 
 - Mehl, Saft, Wasser, Hefe grob mischen und 45min abgedeckt bei Seite stellen
 - Öl und Salz zugeben, Dinkel maximal 5 Minuten gut kneten zu einem glatten Teig
